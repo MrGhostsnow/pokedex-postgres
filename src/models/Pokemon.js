@@ -1,7 +1,7 @@
-const Sequelize = require('sequelize')
-const connection = require('../database/db')
+const Sequelize = require("sequelize");
+const connection = require("../database/db");
 
-const Pokemon = connection.define('pokemon', {
+const Pokemon = connection.define("pokemon", {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -26,9 +26,9 @@ const Pokemon = connection.define('pokemon', {
     },
 },
 {
-    frezzeTableName: true,
+    freezeTableName: true,
     timestamps: false,
-    createAt: false,
+    createdAt: false,
     updatedAt: false,
 }
 );
