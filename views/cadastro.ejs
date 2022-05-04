@@ -10,6 +10,9 @@
   </head>
   <body>
     <%- include('./partials/header.ejs') %>
+    <% if(message != "") {%>
+      <%- include('./partials/alerts.ejs') %>
+    <% } %>
     <h2 id="cadastro">Cadastrar novo Pokémon</h2>
     <section id="cadastro">
       <picture>
@@ -117,7 +120,7 @@
     </section>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
   <%- include('./partials/footer.ejs') %>
 </html>

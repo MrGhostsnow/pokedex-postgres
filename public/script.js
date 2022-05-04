@@ -8,6 +8,48 @@ var categoria = document.getElementById("categoria");
 var habilidade = document.getElementById("habilidade");
 var img = document.getElementById("imagem");
 
+const closeAlert = () => {
+  const close = document.querySelector("#close-message");
+  const message = document.querySelector(".message");
+
+  close.addEventListener("click", () => {
+    message.style.display = "none";
+  });
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 5000);
+};
+closeAlert()
+
+const viewDropdown = () =>{
+  const buttons = document.querySelectorAll(".dropdown-button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", (event) =>{
+      const content = event.path[2].children[1];
+
+      content.classList.toggle("active")
+
+      if(content.classList.contains("active")){
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+
+      content.addEventListener("mouseleave", () =>{
+        content.classList.remove("active")
+        if(!content.classList.contains("active")){
+          content.style.display = "none";
+        }
+      })
+
+
+    })
+  })
+};
+viewDropdown();
+
 function validarCampos() {
   if (
     nome.value == "" ||
@@ -25,17 +67,4 @@ function validarCampos() {
   }
 }
 
-bot.addEventListener("click", abreModal);
 
-function abreModal(e) {
-  const modalEl = document.querySelector(".modal");
-  modalEl.classList.add("visivel");
-}
-
-const fechar = document.querySelectorAll(".fechar-modal");
-fechar.forEach((fecharEl) => fecharEl.addEventListener("click", fecharModal));
-
-function fecharModal(e) {
-  constmodalEl = document.querySelector(".modal");
-  modalEl.classList.remove("visivel");
-}

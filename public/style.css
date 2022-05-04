@@ -17,6 +17,10 @@ nav {
   width: 100%;
   height: 15%;
   background-color: #ef4036;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
 }
 
 nav ul {
@@ -127,7 +131,7 @@ section#cards div.card p#tipo {
   font-weight: bolder;
 }
 
-section#cards div.card a {
+ section#cards div.card a {
   padding: 0.6rem;
   width: 20%;
 }
@@ -174,14 +178,15 @@ section#cards div.card a:hover {
 section#cards div.card a#apagar:hover {
   background-color: #ff0000;
   color: #fff;
-}
+} 
 
 footer {
   background-color: #000000;
-  margin-top: 2rem;
-  width: 100%;
+  margin-top: 4rem;
+  height: 5rem;
   text-align: center;
   font-size: 1rem;
+  
 }
 
 footer a {
@@ -397,3 +402,129 @@ fieldset {
     background-color: red;
     color: #fff;
   }
+
+  .modal-body p{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  div#btns-del{
+    display: flex;
+    margin: 0 auto;
+  }
+
+  div#btns-del a{
+    padding: 0.7rem;
+    text-decoration: none;
+    width: 100%;
+    margin: 2rem 1rem 1rem;
+    border-radius: 3px;
+  }
+  
+
+  div#btns-del a#no{
+    color: #dc0a2d;
+    border: solid 1px #dc0a2d;
+    transition: all 0.3s ease-in-out;
+  }
+
+  div#btns-del a#no:hover{
+    color: #fff;
+    background-color: #dc0a2d;
+  }
+
+  div#btns-del a#yes{
+    color: #0077ff;
+    border: solid 1px #0077ff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  div#btns-del a#yes:hover{
+    color: #fff;
+    background-color: #0077ff;
+  }
+
+  .message{
+    top: 7rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    padding: 1.2rem;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+
+  .message-danger{
+    background-color: #ff0000;
+    color: #fff;
+  }
+
+  .message-success{
+    background-color: rgb(52, 168, 52);
+    color: #fff;
+  }
+
+  #close-message{
+    cursor: pointer;
+  }
+
+
+  .search{
+    padding-right:2rem ;
+}
+
+  .search input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 3px;
+    width: 15rem;
+    border: 1px solid gray;
+  }
+
+  .search button{
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 1rem;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .search button:hover{
+    background-color: #fff;
+    color: gray;
+  }
+
+  #search-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  #search-space a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #dc0a2d;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #dc0a2d;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #search-space a:hover{
+    color: #dc0a2d;
+    background-color: #fff;
+  }
+
+  #search-space h2{
+    color: #dc0a2d;
+  }
+
+
