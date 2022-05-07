@@ -115,16 +115,16 @@ const getById = async (req, res) => {
       }
 
       res.render("index", {pokedex: [], pokemonPut: null, pokemonDel: null, message, type, pokemonSearch: pokemon});
+      console.log(pokemon.length)
 
     } catch (err) {
       res.status(500).send({ err: err.message });
     }
   };
 
-  const detalhes = (req, res) =>{
+  const detalhes = async (req, res) =>{
   try {
-    const id = req.params.id;
-    const pokemon = Pokemon[id - 1];
+    const pokemon = await Pokemon.findByPk(req.params.id);
      res.render("detalhes.ejs", {pokemon,
      });
   } catch (err) {
